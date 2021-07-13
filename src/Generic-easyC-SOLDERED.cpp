@@ -24,7 +24,7 @@ Sensor::Sensor(int _pin)
 }
 
 /**
- * @brief                   Overloaded function for virtal in base class to initialize sensor specific.
+ * @brief                   Overloaded function for virtual in base class to initialize sensor specific.
  */
 void Sensor::initializeNative()
 {
