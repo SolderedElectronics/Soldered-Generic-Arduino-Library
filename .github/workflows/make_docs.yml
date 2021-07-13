@@ -1,3 +1,12 @@
-uses: mattnotmitt/doxygen-action@v1
-with:
-  doxyfile-path: "docs/Doxyfile"
+name: Make docs
+
+on: [push]
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: mattnotmitt/doxygen-action@v1
+        with:
+          doxyfile-path: "docs/Doxyfile"
