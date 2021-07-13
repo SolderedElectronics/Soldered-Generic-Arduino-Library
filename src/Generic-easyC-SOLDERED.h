@@ -12,8 +12,8 @@
 #ifndef __SENSOR__
 #define __SENSOR__
 
-#include "../libs/Generic-easyC/easyC.h"
 #include "Arduino.h"
+#include "libs/Generic-easyC/easyC.h"
 
 class Sensor : EasyC
 {
