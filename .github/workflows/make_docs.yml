@@ -7,9 +7,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo ::set-env name=REPOSITORY_NAME::$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}')
-        shell: bash
       - uses: mattnotmitt/doxygen-action@v1
         with:
-          doxyfile-path: "/github/workspace/${{REPOSITORY_NAME}}/docs/Doxygen"
-          working-directory: "/github/workspace/${{REPOSITORY_NAME}}"
+          doxyfile-path: "docs/Doxygen"
