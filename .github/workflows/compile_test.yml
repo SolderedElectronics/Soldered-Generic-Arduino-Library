@@ -38,5 +38,5 @@ jobs:
           required-libraries: ${{ env.REQUIRED_LIBRARIES }}
           sketches-exclude: ${{ matrix.sketches-exclude }}
           build-properties: ${{ toJson(matrix.build-properties) }}
-          sketch-names: Read_Values.ino
+          sketch-names: Template.ino
           sketch-names-find-start: examples
