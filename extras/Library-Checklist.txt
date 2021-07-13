@@ -1,0 +1,9 @@
+✅ | Make coffee
+❌ | Create repo from https://github.com/e-radionicacom/Generic-easyC
+❌ | Write an API wrapper (add native contructor and initializeNative)
+❌ | Write firmware for Attiny if necessary
+❌ | Document code using doxygen tags (set PROJECT_NAME, PROJECT_NUMBER and PROJECT_BRIEF)
+❌ | Write some basic examples
+❌ | Create readme containing everything in the README of this example
+❌ | Fill in keywords.txt and library.properties as in https://www.arduino.cc/en/Hacking/libraryTutorial
+❌ | Push to main, make a release, update doxygen PROJECT_NUMBER and PR to Arduino Library Manager
