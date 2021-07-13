@@ -14,3 +14,9 @@ jobs:
         with:
           doxyfile-path: ./Doxyfile
           working-directory: .
+
+      - uses: EndBug/add-and-commit@v4
+        with:
+          author_name: Docs Robot
+          author_email: robot@example.com
+          message: "Committing documentation changes"
