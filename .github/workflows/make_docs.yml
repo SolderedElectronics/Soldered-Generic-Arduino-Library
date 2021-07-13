@@ -8,3 +8,5 @@ jobs:
 
     steps:
       - uses: mattnotmitt/doxygen-action@v1
+        with:
+          doxyfile-path: "/home/runner/work/Generic-easyC/Generic-easyC/docs/Doxyfile"
