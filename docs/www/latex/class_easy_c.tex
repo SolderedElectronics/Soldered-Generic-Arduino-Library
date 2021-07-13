@@ -1,0 +1,217 @@
+\hypertarget{class_easy_c}{}\doxysection{EasyC Class Reference}
+\label{class_easy_c}\index{EasyC@{EasyC}}
+
+
+{\ttfamily \#include $<$easy\+C.\+h$>$}
+
+Inheritance diagram for EasyC\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_easy_c}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_easy_c_a2ea672a225a32eab52c2b20733fd26bd}{EasyC}} ()
+\begin{DoxyCompactList}\small\item\em Main constructor for easyC version. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_easy_c_a1b5a82b8a59daea79de76e496457e176}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Initializes sensors on native or easyC on default address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_easy_c_a9e71467da6f38cbe47b10e96694a4f91}{begin}} (uint8\+\_\+t \+\_\+address)
+\begin{DoxyCompactList}\small\item\em Initializes sensors on supplied i2c address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_easy_c_a48c8aa55d48ef0cc11047cab0735c998}{initialize\+Native}} ()=0
+\item 
+int \mbox{\hyperlink{class_easy_c_a10aa7df19e8c7bf12cd720b662f317a3}{send\+Address}} (char reg\+Addr)
+\begin{DoxyCompactList}\small\item\em Private function to send a single byte to sensor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_easy_c_a9a3d39be50b348768bc4b5dea3dae01a}{read\+Data}} (char a\mbox{[}$\,$\mbox{]}, int n)
+\begin{DoxyCompactList}\small\item\em Private function to read n bytes over i2c. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_easy_c_a5231ae10c997be43f09532a6793fc8ea}{send\+Data}} (char a\mbox{[}$\,$\mbox{]}, int n)
+\begin{DoxyCompactList}\small\item\em Private function to write n bytes over i2c. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_easy_c_a45bd6c915c1fa0998e273f69ee2d2376}{read\+Register}} (char reg\+Addr, char a\mbox{[}$\,$\mbox{]}, size\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Private function to send over i2c and then read n bytes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_easy_c_abb766b60f26778dbc64e8792fd754729}{native}} = 0
+\item 
+bool \mbox{\hyperlink{class_easy_c_a2f55de657a84e73edda23dae91d30436}{begin\+Done}} = 0
+\item 
+int \mbox{\hyperlink{class_easy_c_a8b880d5daf116adde0cc436f1e4c0853}{err}}
+\item 
+char \mbox{\hyperlink{class_easy_c_a6f4c6f2e8723b0c0495e126d49f5fcda}{address}}
+\item 
+const char \mbox{\hyperlink{class_easy_c_a9052ae674b3553bbb19283278299f395}{default\+Address}} = 0x30
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_easy_c_a2ea672a225a32eab52c2b20733fd26bd}\label{class_easy_c_a2ea672a225a32eab52c2b20733fd26bd}} 
+\index{EasyC@{EasyC}!EasyC@{EasyC}}
+\index{EasyC@{EasyC}!EasyC@{EasyC}}
+\doxysubsubsection{\texorpdfstring{EasyC()}{EasyC()}}
+{\footnotesize\ttfamily Easy\+C\+::\+EasyC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main constructor for easyC version. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_easy_c_a1b5a82b8a59daea79de76e496457e176}\label{class_easy_c_a1b5a82b8a59daea79de76e496457e176}} 
+\index{EasyC@{EasyC}!begin@{begin}}
+\index{begin@{begin}!EasyC@{EasyC}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Easy\+C\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes sensors on native or easyC on default address. 
+
+\mbox{\Hypertarget{class_easy_c_a9e71467da6f38cbe47b10e96694a4f91}\label{class_easy_c_a9e71467da6f38cbe47b10e96694a4f91}} 
+\index{EasyC@{EasyC}!begin@{begin}}
+\index{begin@{begin}!EasyC@{EasyC}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Easy\+C\+::begin (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{\+\_\+address }\end{DoxyParamCaption})}
+
+
+
+Initializes sensors on supplied i2c address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint8\+\_\+t} & \+\_\+address Custom easyC sensor address \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_easy_c_a48c8aa55d48ef0cc11047cab0735c998}\label{class_easy_c_a48c8aa55d48ef0cc11047cab0735c998}} 
+\index{EasyC@{EasyC}!initializeNative@{initializeNative}}
+\index{initializeNative@{initializeNative}!EasyC@{EasyC}}
+\doxysubsubsection{\texorpdfstring{initializeNative()}{initializeNative()}}
+{\footnotesize\ttfamily virtual void Easy\+C\+::initialize\+Native (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_sensor_adb537c76173019fddf84b2d89e6c6559}{Sensor}}.
+
+\mbox{\Hypertarget{class_easy_c_a9a3d39be50b348768bc4b5dea3dae01a}\label{class_easy_c_a9a3d39be50b348768bc4b5dea3dae01a}} 
+\index{EasyC@{EasyC}!readData@{readData}}
+\index{readData@{readData}!EasyC@{EasyC}}
+\doxysubsubsection{\texorpdfstring{readData()}{readData()}}
+{\footnotesize\ttfamily int Easy\+C\+::read\+Data (\begin{DoxyParamCaption}\item[{char}]{a\mbox{[}$\,$\mbox{]},  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Private function to read n bytes over i2c. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & a\mbox{[}\mbox{]} Array to read data to \\
+\hline
+{\em int} & n Number of bytes to read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Error code, always 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_easy_c_a45bd6c915c1fa0998e273f69ee2d2376}\label{class_easy_c_a45bd6c915c1fa0998e273f69ee2d2376}} 
+\index{EasyC@{EasyC}!readRegister@{readRegister}}
+\index{readRegister@{readRegister}!EasyC@{EasyC}}
+\doxysubsubsection{\texorpdfstring{readRegister()}{readRegister()}}
+{\footnotesize\ttfamily int Easy\+C\+::read\+Register (\begin{DoxyParamCaption}\item[{char}]{reg\+Addr,  }\item[{char}]{a\mbox{[}$\,$\mbox{]},  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Private function to send over i2c and then read n bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & reg\+Addr Address of register to access data from \\
+\hline
+{\em char} & a Array to put data in \\
+\hline
+{\em size\+\_\+t} & n Size of data to read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if read successfuly, error code from end\+Transmission if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_easy_c_a10aa7df19e8c7bf12cd720b662f317a3}\label{class_easy_c_a10aa7df19e8c7bf12cd720b662f317a3}} 
+\index{EasyC@{EasyC}!sendAddress@{sendAddress}}
+\index{sendAddress@{sendAddress}!EasyC@{EasyC}}
+\doxysubsubsection{\texorpdfstring{sendAddress()}{sendAddress()}}
+{\footnotesize\ttfamily int Easy\+C\+::send\+Address (\begin{DoxyParamCaption}\item[{char}]{reg\+Addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Private function to send a single byte to sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & reg\+Addr Address of register to access later\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Standard end\+Transmission error codes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_easy_c_a5231ae10c997be43f09532a6793fc8ea}\label{class_easy_c_a5231ae10c997be43f09532a6793fc8ea}} 
+\index{EasyC@{EasyC}!sendData@{sendData}}
+\index{sendData@{sendData}!EasyC@{EasyC}}
+\doxysubsubsection{\texorpdfstring{sendData()}{sendData()}}
+{\footnotesize\ttfamily int Easy\+C\+::send\+Data (\begin{DoxyParamCaption}\item[{char}]{a\mbox{[}$\,$\mbox{]},  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Private function to write n bytes over i2c. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & a\mbox{[}\mbox{]} Array to read data from \\
+\hline
+{\em int} & n Number of bytes to read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Standard end\+Transmission error codes 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_easy_c_a6f4c6f2e8723b0c0495e126d49f5fcda}\label{class_easy_c_a6f4c6f2e8723b0c0495e126d49f5fcda}} 
+\index{EasyC@{EasyC}!address@{address}}
+\index{address@{address}!EasyC@{EasyC}}
+\doxysubsubsection{\texorpdfstring{address}{address}}
+{\footnotesize\ttfamily char Easy\+C\+::address\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_easy_c_a2f55de657a84e73edda23dae91d30436}\label{class_easy_c_a2f55de657a84e73edda23dae91d30436}} 
+\index{EasyC@{EasyC}!beginDone@{beginDone}}
+\index{beginDone@{beginDone}!EasyC@{EasyC}}
+\doxysubsubsection{\texorpdfstring{beginDone}{beginDone}}
+{\footnotesize\ttfamily bool Easy\+C\+::begin\+Done = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_easy_c_a9052ae674b3553bbb19283278299f395}\label{class_easy_c_a9052ae674b3553bbb19283278299f395}} 
+\index{EasyC@{EasyC}!defaultAddress@{defaultAddress}}
+\index{defaultAddress@{defaultAddress}!EasyC@{EasyC}}
+\doxysubsubsection{\texorpdfstring{defaultAddress}{defaultAddress}}
+{\footnotesize\ttfamily const char Easy\+C\+::default\+Address = 0x30\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_easy_c_a8b880d5daf116adde0cc436f1e4c0853}\label{class_easy_c_a8b880d5daf116adde0cc436f1e4c0853}} 
+\index{EasyC@{EasyC}!err@{err}}
+\index{err@{err}!EasyC@{EasyC}}
+\doxysubsubsection{\texorpdfstring{err}{err}}
+{\footnotesize\ttfamily int Easy\+C\+::err\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_easy_c_abb766b60f26778dbc64e8792fd754729}\label{class_easy_c_abb766b60f26778dbc64e8792fd754729}} 
+\index{EasyC@{EasyC}!native@{native}}
+\index{native@{native}!EasyC@{EasyC}}
+\doxysubsubsection{\texorpdfstring{native}{native}}
+{\footnotesize\ttfamily int Easy\+C\+::native = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{easy_c_8h}{easy\+C.\+h}}\item 
+\mbox{\hyperlink{easy_c_8cpp}{easy\+C.\+cpp}}\end{DoxyCompactItemize}

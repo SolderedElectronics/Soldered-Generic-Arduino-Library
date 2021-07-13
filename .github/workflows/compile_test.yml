@@ -1,0 +1,42 @@
+name: arduino-test-compile-ActionTest
+on:
+  push:
+    paths:
+      - "**.ino"
+      - "**.cpp"
+      - "**.h"
+      - "arduino-test-compile.sh"
+      - "action.yml"
+      - "**arduino-test-compile-ActionTest.yml"
+
+jobs:
+  build:
+    name: ${{ matrix.arduino-boards-fqbn }} - test compiling examples
+
+    runs-on: ubuntu-18.04 # ubuntu-latest
+
+    strategy:
+      matrix:
+        arduino-boards-fqbn:
+          - arduino:avr:uno
+
+        include:
+          - arduino-boards-fqbn: arduino:avr:uno
+
+      fail-fast: false
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Compile all examples using the arduino-test-compile action
+        uses: ArminJo/arduino-test-compile@master
+        with:
+          arduino-board-fqbn: ${{ matrix.arduino-boards-fqbn }}
+          arduino-platform: ${{ matrix.arduino-platform }}
+          platform-url: ${{ matrix.platform-url }}
+          required-libraries: ${{ env.REQUIRED_LIBRARIES }}
+          sketches-exclude: ${{ matrix.sketches-exclude }}
+          build-properties: ${{ toJson(matrix.build-properties) }}
+          sketch-names: Read_Values.ino
+          sketch-names-find-start: examples

@@ -1,0 +1,3 @@
+uses: mattnotmitt/doxygen-action@v1
+with:
+  doxyfile-path: "docs/Doxyfile"
