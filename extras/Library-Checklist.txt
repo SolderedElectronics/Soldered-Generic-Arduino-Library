@@ -1,5 +1,6 @@
 ✅ | Make coffee
 ❌ | Create repo from https://github.com/e-radionicacom/Generic-easyC
+❌ | Enable Github pages from main branch and /docs folder
 ❌ | Write an API wrapper (add native contructor and initializeNative)
 ❌ | Write firmware for Attiny if necessary
 ❌ | Document code using doxygen tags (set PROJECT_NAME, PROJECT_NUMBER and PROJECT_BRIEF)
