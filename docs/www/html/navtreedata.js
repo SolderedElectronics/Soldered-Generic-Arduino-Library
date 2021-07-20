@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "Generic easyC lib documentation", "index.html", [
-    [ "generic-easyC", "md__r_e_a_d_m_e.html", null ],
+    [ "NAZIV PROIZVODA Arduino library", "md__r_e_a_d_m_e.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
