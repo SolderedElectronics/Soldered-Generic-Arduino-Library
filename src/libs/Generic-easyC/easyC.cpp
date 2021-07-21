@@ -106,7 +106,7 @@ int EasyC::readData(char a[], int n)
  *
  * @return int       Standard endTransmission error codes
  */
-int EasyC::sendData(char a[], int n)
+int EasyC::sendData(const uint8_t *a, int n)
 {
     Wire.beginTransmission(address);
     Wire.write(a, n);
