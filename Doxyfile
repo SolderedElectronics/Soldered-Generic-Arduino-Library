@@ -31,6 +31,7 @@ DOXYFILE_ENCODING      = UTF-8
 # project for which the documentation is generated. This name is used in the
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
+#
 
 PROJECT_NAME           = "Generic easyC lib documentation"
 
