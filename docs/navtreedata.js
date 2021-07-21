@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Generic easyC lib documentation", "index.html", [
+  [ "easyC Hall Effect Sensor Soldered library", "index.html", [
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
