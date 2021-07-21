@@ -24,11 +24,6 @@ Access Arduino library documentation [here](ADD LINK).
 - Tutorial for using the NAZIV PROIZVODA board
 - Installing an Arduino library
 
-### Original source
-
-This library is possible thanks to original [naziv libraryja]() library. Thank you, [library author]().
-
-
 ### About Soldered
 ![Soldered logo](LINK IMAGE HERE)
 
