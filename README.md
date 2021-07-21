@@ -1,5 +1,8 @@
 # NAZIV PROIZVODA Arduino library
-​
+
+[![Compile Sketches](https://github.com/e-radionicacom/Generic-easyC/actions/workflows/compile_test.yml/badge.svg?branch=dev)](https://github.com/e-radionicacom/Generic-easyC/actions/workflows/compile_test.yml)
+[![Make docs and publish to GitHub Pages](https://github.com/e-radionicacom/Generic-easyC/actions/workflows/make_docs.yml/badge.svg?branch=dev)](https://github.com/e-radionicacom/Generic-easyC/actions/workflows/make_docs.yml)
+
 | ![Tux, the Linux mascot](https://upload.wikimedia.org/wikipedia/commons/8/8f/Example_image.svg) |
 | :---------------------------------------------------------------------------------------------: |
 | [NAZIV PROIZVODA](www.solde.red/SKU)                                                            |
