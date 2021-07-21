@@ -9,7 +9,6 @@
  * @authors     @ soldered.com
  ***************************************************/
 
-
 #include "Generic-easyC-SOLDERED.h"
 
 void setup()
