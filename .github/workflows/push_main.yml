@@ -31,10 +31,21 @@ jobs:
       - run: cp ./dev/keywords.txt ./keywords.txt
       - run: cp ./dev/library.properties ./library.properties
 
+      - run: tree
+
       - uses: EndBug/add-and-commit@v7
         with:
           author_name: Main Push Robot
           author_email: robot@example.com
           message: "Committing dev changes"
           branch: main
-          add: "examples src LICENSE README.md keywords.txt library.properties"
+          cwd: .
+          add:
+            [
+              "examples",
+              "src",
+              "LICENSE",
+              "README.md",
+              "keywords.txt",
+              "library.properties",
+            ]
