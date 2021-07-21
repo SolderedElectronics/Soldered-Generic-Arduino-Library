@@ -5,7 +5,7 @@
  * @brief       Basic funtions for easyC
  *
  *
- *
+ * @copyright GNU General Public License v3.0
  * @authors     @ soldered.com
  ***************************************************/
 
