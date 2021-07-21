@@ -12,8 +12,6 @@ OPIS PROIZVODA + LINK NA [easyC ecosystem](www.soldered.com/easyC).
 ### Repository Contents
 - **/src** - source files for the library (.h & .cpp)
 - **/examples** - examples for using the library
-- **/docs** - documentation for using the library
-- **/extras** - Attiny firmware to emulate the I2C protocol, TO DO list for Soldered developers, other
 - ***other*** - other files are present in the root folder of this repo. *keywords* file highlights function words in your IDE, *library.properties* enables implementation with Arduino Library Manager, and other files help us generate and mantain the code and documentation.
 ​
 ### Hardware
