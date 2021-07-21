@@ -18,6 +18,9 @@ OPIS PROIZVODA + LINK NA [easyC ecosystem](www.soldered.com/easyC).
 You can find hardware design for this board in NAZIV PROIZVODA hardware repository
 
 ### Documentation
+
+Access Arduino library documentation [here](ADD LINK).
+
 - Tutorial for using the NAZIV PROIZVODA board
 - Installing an Arduino library
 
