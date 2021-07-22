@@ -31,6 +31,7 @@
     | Lines to this repo link e.g. (4 places, scroll to the right for other)
             [![Compile Sketches](https://github.com/e-radionicacom/[repo name]/actions/workflows/compile_test.yml/badge.svg?branch=dev)](https://github.com/e-radionicacom/[repo name]/actions/workflows/compile_test.yml)
             [![Make docs and publish to GitHub Pages](https://github.com/e-radionicacom/[repo name]/actions/workflows/make_docs.yml/badge.svg?branch=dev)](https://github.com/e-radionicacom/[repo name]/actions/workflows/make_docs.yml)
+    | Also change link to docs to the one provided by GH-pages
 ❌ | Fill in keywords.txt with added function names
 ❌ | Fill in library.properties with:
     | Library name
