@@ -5,9 +5,9 @@
 
 | ![Product name](https://upload.wikimedia.org/wikipedia/commons/8/8f/Example_image.svg) |
 | :---------------------------------------------------------------------------------------------: |
-| [NAZIV PROIZVODA](www.solde.red/SKU)                                                            |
+| [NAZIV PROIZVODA](https://www.solde.red/SKU)                                                            |
 
-OPIS PROIZVODA + LINK NA [easyC ecosystem](www.soldered.com/easyC). 
+OPIS PROIZVODA + LINK NA [easyC ecosystem](https://www.soldered.com/easyC). 
 
 ### Repository Contents
 - **/src** - source files for the library (.h & .cpp)
