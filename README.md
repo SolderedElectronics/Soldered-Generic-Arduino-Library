@@ -19,7 +19,7 @@ You can find hardware design for this board in NAZIV PROIZVODA hardware reposito
 
 ### Documentation
 
-Access Arduino library documentation [here](../../).
+Access Arduino library documentation [here](https://e-radionicacom.github.io/Generic-easyC/).
 
 - Tutorial for using the NAZIV PROIZVODA board
 - Installing an Arduino library
