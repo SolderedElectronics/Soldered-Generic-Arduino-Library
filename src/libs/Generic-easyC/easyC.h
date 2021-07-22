@@ -1,7 +1,7 @@
 /**
  **************************************************
  *
- * @file        Generic-easyC-SOLDERED.h
+ * @file        easyC.h
  * @brief       Basic funtions for easyC libraries
  *
  *
