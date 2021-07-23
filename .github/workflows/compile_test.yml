@@ -13,6 +13,8 @@ jobs:
           - fqbn: Croduino_Boards:esp8266:NOVA
           - fqbn: Croduino_Boards:esp8266:NOVA2
           - fqbn: Croduino_Boards:esp8266:miniNOVA2
+        OS:
+          - Linux: ubuntu # for badger support
 
     steps:
       - name: Checkout dev branch
