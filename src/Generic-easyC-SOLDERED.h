@@ -15,7 +15,7 @@
 #include "Arduino.h"
 #include "libs/Generic-easyC/easyC.hpp"
 
-class Sensor : public EASYC_SOLDERED_LIBS::EasyC
+class Sensor : public EasyC
 {
   public:
     Sensor(int _pin);
