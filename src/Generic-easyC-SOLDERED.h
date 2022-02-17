@@ -13,7 +13,7 @@
 #define __SENSOR__
 
 #include "Arduino.h"
-#include "libs/Generic-easyC/easyC.h"
+#include "libs/Generic-easyC/easyC.hpp"
 
 class Sensor : public EASYC_SOLDERED_LIBS::EasyC
 {
