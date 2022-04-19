@@ -1,6 +1,5 @@
 # NAZIV PROIZVODA Arduino library
 
-[![Compile Sketches](http://github-actions.40ants.com/e-radionicacom/Soldered-Generic-Arduino-Library/matrix.svg?branch=dev&only=Compile%20Sketches)](https://github.com/e-radionicacom/Soldered-Generic-Arduino-Library/actions/workflows/compile_test.yml)
 [![Make docs and publish to GitHub Pages](https://github.com/e-radionicacom/Soldered-Generic-Arduino-Library/actions/workflows/make_docs.yml/badge.svg?branch=dev)](https://github.com/e-radionicacom/Soldered-Generic-Arduino-Library/actions/workflows/make_docs.yml)
 
 | ![Product name](https://upload.wikimedia.org/wikipedia/commons/8/8f/Example_image.svg) |
@@ -24,6 +23,13 @@ Access Arduino library documentation [here](https://e-radionicacom.github.io/Sol
 - Tutorial for using the NAZIV PROIZVODA board
 - Installing an Arduino library
 
+### Board compatibility
+
+The library is compatible with board & microcontroller families shown in green below: 
+
+[![Compile Sketches](http://github-actions.40ants.com/e-radionicacom/Soldered-Generic-Arduino-Library/matrix.svg?branch=dev&only=Compile%20Sketches)](https://github.com/e-radionicacom/Soldered-Generic-Arduino-Library/actions/workflows/compile_test.yml)
+
+
 ### About Soldered
 ![Soldered logo](https://raw.githubusercontent.com/e-radionicacom/Soldered-Generic-Arduino-Library/dev/extras/Logo%20horizontal-2.svg)
 
@@ -46,4 +52,3 @@ Soldered invests vast amounts of time into hardware & software for these product
 Check license details in the LICENSE file. Long story short, use these open-source files for any purpose you want to, as long as you apply the same open-source licence to it and disclose the original source. No warranty - all designs in this repository are distributed in the hope that they will be useful, but without any warranty. They are provided "AS IS", therefore without warranty of any kind, either expressed or implied. The entire quality and performance of what you do with the contents of this repository are your responsibility. In no event, Soldered (TAVU) will be liable for your damages, losses, including any general, special, incidental or consequential damage arising out of the use or inability to use the contents of this repository. 
 
 Thank you from your fellow makers at Soldered.
-
