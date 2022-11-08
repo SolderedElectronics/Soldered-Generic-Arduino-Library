@@ -25,7 +25,9 @@
 var NAVTREE =
 [
   [ "16x2 easyC LCD Library", "index.html", [
-    [ "NAZIV PROIZVODA Arduino library", "index.html", null ],
+    [ "NAZIV PROIZVODA Arduino library", "index.html", [
+      [ "Have fun!", "index.html#autotoc_md8", null ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
