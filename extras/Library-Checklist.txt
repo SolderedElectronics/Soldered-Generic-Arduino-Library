@@ -1,5 +1,5 @@
 ✅ | Make coffee
-❌ | Create repo from https://github.com/e-radionicacom/Generic-easyC, be sure to check "Include all branches"
+❌ | Create repo from https://github.com/SolderedElectronics/Generic-easyC, be sure to check "Include all branches"
     | Be sure to name it Soldered-[sensor name]-Arduino-Library
 ❌ | Checkout dev branch and make changes here only.
 ❌ | Rename src/Generic-easyC-SOLDERED.h/.cpp to src/[sensor name]-SOLDERED.h/.cpp
@@ -27,11 +27,12 @@
         - https://docs.google.com/spreadsheets/d/1OgNTXLb2BICWH0ZpkS87TvWyUalTrakakhnibQFRWnQ/edit?usp=sharing
 ❌ | Fill in README.md
     | Be sure to change
-        [![Compile Sketches](https://github.com/e-radionicacom/Generic-easyC/actions/workflows/compile_test.yml/badge.svg?branch=dev)](https://github.com/e-radionicacom/[repo name]/actions/workflows/compile_test.yml)
-        [![Make docs and publish to GitHub Pages](https://github.com/e-radionicacom/Generic-easyC/actions/workflows/make_docs.yml/badge.svg?branch=dev)](https://github.com/e-radionicacom/[repo name]/actions/workflows/make_docs.yml)
+        [![Compile Sketches](https://github.com/SolderedElectronics/Generic-easyC/actions/workflows/compile_test.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/[repo name]/actions/workflows/compile_test.yml)
+        [![Make docs and publish to GitHub Pages](https://github.com/SolderedElectronics/Generic-easyC/actions/workflows/make_docs.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/[repo name]/actions/workflows/make_docs.yml)
     | Lines to this repo link e.g. (4 places, scroll to the right for other)
-            [![Compile Sketches](https://github.com/e-radionicacom/[repo name]/actions/workflows/compile_test.yml/badge.svg?branch=dev)](https://github.com/e-radionicacom/[repo name]/actions/workflows/compile_test.yml)
-            [![Make docs and publish to GitHub Pages](https://github.com/e-radionicacom/[repo name]/actions/workflows/make_docs.yml/badge.svg?branch=dev)](https://github.com/e-radionicacom/[repo name]/actions/workflows/make_docs.yml)
+            [![Compile Sketches](https://github.com/SolderedElectronics/[repo name]/actions/workflows/compile_test.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/[repo name]/actions/workflows/compile_test.yml)
+            [![Make docs and publish to GitHub Pages](https://github.com/SolderedElectronics/[repo name]/actions/workflows/make_docs.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/[repo name]/actions/workflows/make_docs.yml)
+            [![Arduino Library Manager Compatibility](https://github.com/SolderedElectronics/[repo name]/actions/workflows/arduino_lint.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/[repo name]/actions/workflows/arduino_lint.yml)
     | Also change link to docs to the one provided by GH-pages
 ❌ | Fill in keywords.txt with added function names
 ❌ | Fill in library.properties with:
@@ -45,9 +46,12 @@
     | PROJECT_BRIEF  - same as library.properties paragraph
 ❌ | Update @authors to your name in all source files (search and replace in vsc works fine)
 ❌ | Push to dev
-    | Check if Github Actions made a push to main and if so make a release with version 1.0.0
+    | Check if Github Actions made a push to main
 ❌ | Set GitHub pages settings
-    | Visit https://github.com/e-radionicacom/[repo name]/settings/pages
+    | Visit https://github.com/SolderedElectronics/[repo name]/settings/pages
     | Change to gh-pages branch and /docs folder
 ❌ | Check if docs are made correctly
+❌ | Check if Board Compatibility test is passing for all boards
+❌ | Check if Arduino Library Manager Compatibility Test is passing
+❌ | Make a release with version 1.0.0
 ❌ | PR to Arduino Library Manager if not done already
