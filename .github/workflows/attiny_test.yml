@@ -1,5 +1,6 @@
 name: Compile Sketches
 on: [push]
+brances: -dev
 
 jobs:
   build:
