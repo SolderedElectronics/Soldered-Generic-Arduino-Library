@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         board:
-          - fqbn: Dasduino_Boards:megaavr:easyC:chip=404
+          - fqbn: Dasduino_Boards:megaavr:easyc:chip=404
       fail-fast: false
       
     steps:
