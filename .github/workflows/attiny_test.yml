@@ -32,4 +32,4 @@ jobs:
           libraries: |
             - source-path: ./
           sketch-paths: |
-            - ./extars/attiny_firmware/
+            - ./extras/attiny_firmware/
