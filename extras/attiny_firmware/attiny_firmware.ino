@@ -10,7 +10,7 @@
  ***************************************************/
 
 #include "easyC.h"
-#include <Wirea.h>
+#include <Wire.h>
 
 int addr = DEFAULT_ADDRESS;
 
