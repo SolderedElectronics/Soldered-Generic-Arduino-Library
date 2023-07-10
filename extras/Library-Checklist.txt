@@ -34,6 +34,13 @@
             [![Make docs and publish to GitHub Pages](https://github.com/SolderedElectronics/[repo name]/actions/workflows/make_docs.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/[repo name]/actions/workflows/make_docs.yml)
             [![Arduino Library Manager Compatibility](https://github.com/SolderedElectronics/[repo name]/actions/workflows/arduino_lint.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/[repo name]/actions/workflows/arduino_lint.yml)
     | Also change link to docs to the one provided by GH-pages
+❌ | If ATtiny firmware not used in this library, be sure to remove.
+        - in README
+            [![ATtiny Firmware Compile Test](https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/attiny_test.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/attiny_test.yml)
+            attiny_test.yml in .github/workflows folder
+❌ | If ATtiny firmware is used in this library, open .github/workflows and open attiny_test.yml.
+        - Change fqbn: Dasduino_Boards:megaavr:easyc:chip=404 to suit your setup (change the value written in chip field. 404 means it is used ATtiny404).
+        - If needed, add libraries to the compile test (or add them into attiny_firmware sketch folder)
 ❌ | Fill in keywords.txt with added function names
 ❌ | Fill in library.properties with:
     | Library name
