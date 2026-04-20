@@ -8,7 +8,7 @@
 | :------------------------------------------------------------------------------------: |
 |                      [NAZIV PROIZVODA](https://www.solde.red/SKU)                      |
 
-OPIS PROIZVODA + LINK NA [easyC ecosystem](https://www.soldered.com/en/easyC).
+OPIS PROIZVODA + LINK NA [Qwiic ecosystem](https://soldered.com/collections/qwiic-ecosystem).
 
 ### Repository Contents
 
@@ -41,7 +41,7 @@ At Soldered, we design and manufacture a wide selection of electronic products t
 
 - [Web Store](https://www.soldered.com/shop)
 - [Tutorials & Projects](https://soldered.com/learn)
-- [Community & Technical support](https://soldered.com/community)
+- [Documentation](https://docs.soldered.com)
 
 ### Original source
 
