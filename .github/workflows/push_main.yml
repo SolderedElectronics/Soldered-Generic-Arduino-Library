@@ -1,39 +1,98 @@
 name: Push to main
 
-on: [push]
+on:
+  workflow_run:
+    workflows:
+      - "Arduino Library Manager Compatibility"
+      - "Compile Sketches"
+      - "Run clang-format Linter"
+      - "Make docs and publish to GitHub Pages"
+    types:
+      - completed
 
 jobs:
   push_main:
     runs-on: ubuntu-latest
+    if: github.event.workflow_run.conclusion == 'success'
 
     steps:
+      - name: Check all required workflows passed
+        id: check_workflows
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const requiredWorkflows = [
+              'Arduino Library Manager Compatibility',
+              'Compile Sketches',
+              'Run clang-format Linter',
+              'Make docs and publish to GitHub Pages'
+            ];
+
+            const sha = context.payload.workflow_run.head_sha;
+            const { data: { workflow_runs } } = await github.rest.actions.listWorkflowRunsForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              head_sha: sha,
+              per_page: 100,
+            });
+
+            let allPassed = true;
+            for (const name of requiredWorkflows) {
+              const completed = workflow_runs.filter(r => r.name === name && r.status === 'completed');
+              if (completed.length === 0) {
+                console.log(`"${name}" not completed yet.`);
+                allPassed = false;
+                break;
+              }
+              const latest = completed.sort((a, b) => new Date(b.created_at) - new Date(a.created_at))[0];
+              if (latest.conclusion !== 'success') {
+                console.log(`"${name}" concluded: ${latest.conclusion}`);
+                allPassed = false;
+                break;
+              }
+            }
+            core.setOutput('proceed', allPassed ? 'true' : 'false');
+
       - name: Checkout main branch
+        if: steps.check_workflows.outputs.proceed == 'true'
         uses: actions/checkout@v2
         with:
           ref: main
           path: .
 
-      - run: git rm -rf .
+      - if: steps.check_workflows.outputs.proceed == 'true'
+        run: git rm -rf .
 
       - name: Checkout dev branch
+        if: steps.check_workflows.outputs.proceed == 'true'
         uses: actions/checkout@v2
         with:
           ref: dev
           path: ./dev
 
-      - run: sudo apt-get install tree
-      - run: tree
+      - if: steps.check_workflows.outputs.proceed == 'true'
+        run: sudo apt-get install tree
+      - if: steps.check_workflows.outputs.proceed == 'true'
+        run: tree
 
-      - run: cp -r ./dev/examples ./examples
-      - run: cp -r ./dev/src ./src
-      - run: cp ./dev/LICENSE ./LICENSE
-      - run: cp ./dev/README.md ./README.md
-      - run: cp ./dev/keywords.txt ./keywords.txt
-      - run: cp ./dev/library.properties ./library.properties
+      - if: steps.check_workflows.outputs.proceed == 'true'
+        run: cp -r ./dev/examples ./examples
+      - if: steps.check_workflows.outputs.proceed == 'true'
+        run: cp -r ./dev/src ./src
+      - if: steps.check_workflows.outputs.proceed == 'true'
+        run: cp ./dev/LICENSE ./LICENSE
+      - if: steps.check_workflows.outputs.proceed == 'true'
+        run: cp ./dev/README.md ./README.md
+      - if: steps.check_workflows.outputs.proceed == 'true'
+        run: cp ./dev/keywords.txt ./keywords.txt
+      - if: steps.check_workflows.outputs.proceed == 'true'
+        run: cp ./dev/library.properties ./library.properties
 
-      - run: tree
+      - if: steps.check_workflows.outputs.proceed == 'true'
+        run: tree
 
-      - uses: EndBug/add-and-commit@v7
+      - if: steps.check_workflows.outputs.proceed == 'true'
+        uses: EndBug/add-and-commit@v7
         with:
           author_name: Main Push Robot
           author_email: robot@example.com
