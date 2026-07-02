@@ -1,0 +1,153 @@
+name: CI
+
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout dev branch
+        uses: actions/checkout@v3
+      - uses: arduino/arduino-lint-action@v1
+        with:
+          compliance: specification
+          project-type: library
+          recursive: true
+
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        board:
+          - fqbn: Dasduino_Boards:avr:core
+          - fqbn: Dasduino_Boards:esp32:connectplus
+          - fqbn: Dasduino_Boards:esp8266:connect
+      fail-fast: false
+
+    steps:
+      - name: Checkout dev branch
+        uses: actions/checkout@v2
+
+      - run: echo ${{ matrix.board.fqbn }}
+
+      - name: Compile examples
+        uses: arduino/compile-sketches@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          platforms: |
+
+
+            - source-url: https://github.com/SolderedElectronics/Dasduino-Board-Definitions-for-Arduino-IDE/raw/master/package_Dasduino_Boards_index.json
+              name: "Dasduino_Boards:avr"
+
+            - source-url: https://github.com/SolderedElectronics/Dasduino-Board-Definitions-for-Arduino-IDE/raw/master/package_Dasduino_Boards_index.json
+              name: "Dasduino_Boards:esp32"
+
+            - source-url: https://github.com/SolderedElectronics/Dasduino-Board-Definitions-for-Arduino-IDE/raw/master/package_Dasduino_Boards_index.json
+              name: "Dasduino_Boards:esp8266"
+
+          fqbn: ${{ matrix.board.fqbn }}
+          libraries: |
+            - source-path: ./
+          sketch-paths: |
+            - ./examples/
+
+  format:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: DoozyX/clang-format-lint-action@v0.20
+        with:
+          source: "./src"
+          exclude: "./src/libs"
+          extensions: "h,cpp,c,ino"
+          clangFormatVersion: 20
+          inplace: True
+      - uses: EndBug/add-and-commit@v9
+        with:
+          author_name: Clang Robot
+          author_email: robot@example.com
+          message: "Committing clang-format changes"
+
+  make_docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout dev branch
+        uses: actions/checkout@v2
+
+      - name: Checkout docs branch
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+          path: ./gh-pages
+
+      - run: cd gh-pages; git rm -rf . ; cd ..
+
+      - run: sudo mv -f src gh-pages/src
+      - run: sudo mv -f examples gh-pages/examples
+      - run: sudo mv -f extras gh-pages/extras
+      - run: sudo cp README.md gh-pages/README.md
+
+      - name: Doxygen Action
+        uses: mattnotmitt/doxygen-action@v1.1.0
+        with:
+          working-directory: ./gh-pages
+          doxyfile-path: ../Doxyfile
+
+      - run: sudo apt-get install tree
+
+      - run: sudo touch gh-pages/html/.nojekyll
+      - run: mv gh-pages/html gh-pages/docs
+
+      - run: tree
+
+      - uses: EndBug/add-and-commit@v7
+        with:
+          author_name: Docs Robot
+          author_email: robot@example.com
+          message: "Committing documentation changes"
+          branch: gh-pages
+          cwd: ./gh-pages/
+          add: docs
+
+  push_main:
+    runs-on: ubuntu-latest
+    needs: [lint, build, format, make_docs]
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v2
+        with:
+          ref: main
+          path: .
+
+      - run: git rm -rf .
+
+      - name: Checkout dev branch
+        uses: actions/checkout@v2
+        with:
+          ref: dev
+          path: ./dev
+
+      - run: sudo apt-get install tree
+      - run: tree
+
+      - run: cp -r ./dev/examples ./examples
+      - run: cp -r ./dev/src ./src
+      - run: cp ./dev/LICENSE ./LICENSE
+      - run: cp ./dev/README.md ./README.md
+      - run: cp ./dev/keywords.txt ./keywords.txt
+      - run: cp ./dev/library.properties ./library.properties
+
+      - run: tree
+
+      - uses: EndBug/add-and-commit@v7
+        with:
+          author_name: Main Push Robot
+          author_email: robot@example.com
+          message: "Committing dev changes"
+          branch: main
+          add: "examples src LICENSE README.md keywords.txt library.properties"
