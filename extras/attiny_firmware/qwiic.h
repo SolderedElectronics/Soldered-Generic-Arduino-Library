@@ -1,5 +1,5 @@
-#ifndef __EASYC_FIRMWARE__
-#define __EASYC_FIRMWARE__
+#ifndef QWIIC_FIRMWARE_H
+#define QWIIC_FIRMWARE_H
 
 // IO port bank A defines
 #define PA0 11
@@ -22,7 +22,7 @@
 #define ADDRESS_PIN2 4
 #define ADDRESS_PIN3 3
 
-// Default address always used by easyC
+// Default address always used by Qwiic
 #define DEFAULT_ADDRESS 0x30
 
 void initDefault()

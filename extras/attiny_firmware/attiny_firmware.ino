@@ -1,15 +1,10 @@
 /**
- **************************************************
- *
- * @file        Template for attiny_firmware
- * @brief       Fill in sensor specific code.
- *
+ * @file attiny_firmware.ino
+ * @brief Fill in sensor specific code.
+ * @author Soldered Electronics
+ */
 
- *
- * @authors     @ soldered.com
- ***************************************************/
-
-#include "easyC.h"
+#include "qwiic.h"
 #include <Wire.h>
 
 int addr = DEFAULT_ADDRESS;

@@ -1,16 +1,11 @@
 /**
- **************************************************
- *
- * @file        easyC.hpp
- * @brief       Basic funtions for easyC libraries
- *
- *
- * @copyright   GNU General Public License v3.0
- * @authors      @ soldered.com
- ***************************************************/
+ * @file qwiic.hpp
+ * @brief Basic functions for Qwiic libraries
+ * @author Soldered Electronics
+ */
 
-#ifndef __EASYC__
-#define __EASYC__
+#ifndef QWIIC_H
+#define QWIIC_H
 
 #include "Arduino.h"
 #include "Wire.h"
@@ -18,20 +13,22 @@
 #define ANALOG_READ_REG 0
 #define DIGITAL_READ_REG 1
 
-class EasyC
+class Qwiic
 {
 public:
     /**
-     * @brief       Main constructor for easyC version
+     * @brief       Main constructor for Qwiic version
      *
      */
-    EasyC()
+    Qwiic()
     {
-        native = 0;
+        native = false;
     }
 
+    virtual ~Qwiic() {}
+
     /**
-     * @brief       Initializes sensors on native or easyC on default address
+     * @brief       Initializes sensors on native or Qwiic on default address
      */
     void begin()
     {
@@ -45,7 +42,7 @@ public:
     /**
      * @brief                  Initializes sensors on supplied i2c address
      *
-     * @param uint8_t _address Custom easyC sensor address
+     * @param uint8_t _address Custom Qwiic sensor address
      */
     void begin(uint8_t _address)
     {
@@ -56,7 +53,8 @@ public:
         beginDone = 1;
     }
 
-    int native = 0;
+protected:
+    bool native = false;
     bool beginDone = 0;
 
     virtual void initializeNative() = 0;
