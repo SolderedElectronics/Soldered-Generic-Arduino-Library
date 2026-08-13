@@ -8,7 +8,7 @@
 ❌ | Change Sensor class in the same file to [sensor name] and all the constructors too
 ❌ | Write firmware for Attiny if necessary
 ❌ | Write an API wrapper (add native contructor and initializeNative functions if native is supported)
-    | For only easyC sensors, 
+    | For only easyC sensors,
         - constructor is only constructor()
         - begin is begin() which default adress to 0x30 and begin(address)
     | For only native sensors:
@@ -27,12 +27,9 @@
         - https://docs.google.com/spreadsheets/d/1OgNTXLb2BICWH0ZpkS87TvWyUalTrakakhnibQFRWnQ/edit?usp=sharing
 ❌ | Fill in README.md
     | Be sure to change
-        [![Compile Sketches](https://github.com/SolderedElectronics/Generic-easyC/actions/workflows/compile_test.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/[repo name]/actions/workflows/compile_test.yml)
-        [![Make docs and publish to GitHub Pages](https://github.com/SolderedElectronics/Generic-easyC/actions/workflows/make_docs.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/[repo name]/actions/workflows/make_docs.yml)
-    | Lines to this repo link e.g. (4 places, scroll to the right for other)
-            [![Compile Sketches](https://github.com/SolderedElectronics/[repo name]/actions/workflows/compile_test.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/[repo name]/actions/workflows/compile_test.yml)
-            [![Make docs and publish to GitHub Pages](https://github.com/SolderedElectronics/[repo name]/actions/workflows/make_docs.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/[repo name]/actions/workflows/make_docs.yml)
-            [![Arduino Library Manager Compatibility](https://github.com/SolderedElectronics/[repo name]/actions/workflows/arduino_lint.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/[repo name]/actions/workflows/arduino_lint.yml)
+        [![CI](https://github.com/SolderedElectronics/Generic-easyC/actions/workflows/ci.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/[repo name]/actions/workflows/ci.yml)
+    | Link to this repo instead (2 places, scroll to the right for other)
+            [![CI](https://github.com/SolderedElectronics/[repo name]/actions/workflows/ci.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/[repo name]/actions/workflows/ci.yml)
     | Also change link to docs to the one provided by GH-pages
 ❌ | If ATtiny firmware not used in this library, be sure to remove.
         - in README

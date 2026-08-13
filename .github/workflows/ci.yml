@@ -1,13 +1,16 @@
 name: CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - dev
 
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout dev branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - uses: arduino/arduino-lint-action@v1
         with:
           compliance: specification
@@ -27,7 +30,7 @@ jobs:
 
     steps:
       - name: Checkout dev branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - run: echo ${{ matrix.board.fqbn }}
 
@@ -57,7 +60,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: DoozyX/clang-format-lint-action@v0.20
         with:
           source: "./src"
@@ -76,10 +79,10 @@ jobs:
 
     steps:
       - name: Checkout dev branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Checkout docs branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           ref: gh-pages
           path: ./gh-pages
@@ -104,7 +107,7 @@ jobs:
 
       - run: tree
 
-      - uses: EndBug/add-and-commit@v7
+      - uses: EndBug/add-and-commit@v9
         with:
           author_name: Docs Robot
           author_email: robot@example.com
@@ -119,7 +122,7 @@ jobs:
 
     steps:
       - name: Checkout main branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           ref: main
           path: .
@@ -127,7 +130,7 @@ jobs:
       - run: git rm -rf .
 
       - name: Checkout dev branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           ref: dev
           path: ./dev
@@ -144,7 +147,7 @@ jobs:
 
       - run: tree
 
-      - uses: EndBug/add-and-commit@v7
+      - uses: EndBug/add-and-commit@v9
         with:
           author_name: Main Push Robot
           author_email: robot@example.com
