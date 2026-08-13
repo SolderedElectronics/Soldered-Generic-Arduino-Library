@@ -21,10 +21,7 @@ You can find hardware design for this board in _NAZIV PROIZVODA_ hardware reposi
 
 ### Documentation
 
-Access Arduino library documentation [here](https://SolderedElectronics.github.io/Soldered-Generic-Arduino-Library/).
-
-- Tutorial for using the NAZIV PROIZVODA board
-- Installing an Arduino library
+Access Arduino library documentation [here](https://docs.soldered.com/).
 
 ### Board compatibility
 
