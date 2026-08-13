@@ -23,12 +23,6 @@ You can find hardware design for this board in _NAZIV PROIZVODA_ hardware reposi
 
 Access Arduino library documentation [here](https://docs.soldered.com/).
 
-### Board compatibility
-
-The library is compatible with board & microcontroller families shown in green below:
-
-[![Compile Sketches](http://github-actions.40ants.com/SolderedElectronics/Soldered-Generic-Arduino-Library/matrix.svg?branch=dev&only=Compile%20Sketches)](https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/ci.yml)
-
 ### About Soldered
 
 <img src="https://raw.githubusercontent.com/SolderedElectronics/Soldered-Generic-Arduino-Library/dev/extras/Soldered-logo-color.png" alt="soldered-logo" width="500"/>
