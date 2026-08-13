@@ -1,15 +1,10 @@
 /**
- **************************************************
- *
- * @file        Template.ino
- * @brief       Example template for easyC sensors
- *
- *
- *
- * @authors     @ soldered.com
- ***************************************************/
+ * @file Template.ino
+ * @brief Example template for Qwiic sensors
+ * @author Soldered Electronics
+ */
 
-#include "Generic-easyC-SOLDERED.h"
+#include "Generic-Qwiic-SOLDERED.h"
 
 void setup()
 {

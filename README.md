@@ -1,7 +1,6 @@
 # NAZIV PROIZVODA Arduino library
 
-[![Make docs and publish to GitHub Pages](https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/make_docs.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/make_docs.yml)
-[![Arduino Library Manager Compatibility](https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/arduino_lint.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/arduino_lint.yml)
+[![CI](https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/ci.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/ci.yml)
 [![ATtiny Firmware Compile Test](https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/attiny_test.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/attiny_test.yml)
 
 | ![Product name](https://upload.wikimedia.org/wikipedia/commons/8/8f/Example_image.svg) |
@@ -22,16 +21,7 @@ You can find hardware design for this board in _NAZIV PROIZVODA_ hardware reposi
 
 ### Documentation
 
-Access Arduino library documentation [here](https://SolderedElectronics.github.io/Soldered-Generic-Arduino-Library/).
-
-- Tutorial for using the NAZIV PROIZVODA board
-- Installing an Arduino library
-
-### Board compatibility
-
-The library is compatible with board & microcontroller families shown in green below:
-
-[![Compile Sketches](http://github-actions.40ants.com/SolderedElectronics/Soldered-Generic-Arduino-Library/matrix.svg?branch=dev&only=Compile%20Sketches)](https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/compile_test.yml)
+Access Arduino library documentation [here](https://docs.soldered.com/).
 
 ### About Soldered
 

@@ -1,21 +1,16 @@
 /**
- **************************************************
- *
- * @file        Generic-easyC-SOLDERED.h
- * @brief       Header file for sensor specific code.
- *
- *
- * @copyright GNU General Public License v3.0
- * @authors     @ soldered.com
- ***************************************************/
+ * @file Generic-Qwiic-SOLDERED.h
+ * @brief Header file for sensor specific code.
+ * @author Soldered Electronics
+ */
 
-#ifndef __SENSOR__
-#define __SENSOR__
+#ifndef SENSOR_H
+#define SENSOR_H
 
 #include "Arduino.h"
-#include "libs/Generic-easyC/easyC.hpp"
+#include "libs/Generic-Qwiic/qwiic.hpp"
 
-class Sensor : public EasyC
+class Sensor : public Qwiic
 {
   public:
     /**
